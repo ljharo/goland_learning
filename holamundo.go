@@ -1,8 +1,23 @@
 package main
 import (
 	"fmt"
-	"unsafe"
 )
+
+func esPar(){
+
+	fmt.Println("el programa valida si un valor es par o par")
+	var valor int
+	fmt.Print("ingresa el valor: ")
+	fmt.Scanln(&valor)
+
+	if (valor % 2) == 0 {
+		fmt.Println("es par")
+	} else {
+		fmt.Println("es impar")
+	}
+
+
+}
 
 func main()  {
 
@@ -45,7 +60,47 @@ func main()  {
 	// var arrayBolean [5]boolean
 	// var arraystring [5]string
 
+	// solo existe el ciclo for
+
+	// var show bool = false
+	// if show {
+	// 	var i int = 0
+	// 	for i < 5 {
+	// 		fmt.Println("Hola")
+	// 		i++
+	// 	}
+
+	// 	fmt.Println("------------------------------")
+
+	// 	for i := 0; i < 5; i++ {
+	// 		fmt.Println(i)
+	// 	}
+
+	// 	fmt.Println("------------------------------")
+
+	// 	i = 0
+	// 	for {
+	// 		fmt.Println(i)
+	// 		i++
+	// 		if i > 5 { break }
+	// 	}
+
+	// }
+	
+	// var a int = 10
+	// var b int = 10
+
+	// if a > b {
+	// 	fmt.Println("a es mayor que b")
+	// } else if a == b {
+	// 	fmt.Println("a es igual a b")
+	// } else {
+	// 	fmt.Println("a es menor que b")
+	// }
+
+	esPar()
+
 }
 
 // link vide
-// https://www.youtube.com/watch?v=BuPK0e0i360&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=12
+// https://www.youtube.com/watch?v=P9oAMtf_t30&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=21
