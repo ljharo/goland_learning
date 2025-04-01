@@ -1,23 +1,10 @@
 package main
-import (
-	"fmt"
-)
 
-func esPar(){
+import "fmt"
 
-	fmt.Println("el programa valida si un valor es par o par")
-	var valor int
-	fmt.Print("ingresa el valor: ")
-	fmt.Scanln(&valor)
-
-	if (valor % 2) == 0 {
-		fmt.Println("es par")
-	} else {
-		fmt.Println("es impar")
-	}
+// "fmt"
 
 
-}
 
 func main()  {
 
@@ -98,9 +85,25 @@ func main()  {
 	// 	fmt.Println("a es menor que b")
 	// }
 
-	esPar()
+	// esPar()
+	// ejemploSwith()
+	// mayorQue(50)
+
+	// array normal
+	var x [3]int8
+	x[0] = 100
+	fmt.Println(x)
+
+	// matriz 
+	var m[2][3]float32
+	m[1][1] = 10.333333
+	fmt.Println(m)
+
+	var str []byte
+	str = append(str, 'h')
+	fmt.Printf("str: %v\n", str)
 
 }
 
 // link vide
-// https://www.youtube.com/watch?v=P9oAMtf_t30&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=21
+// https://www.youtube.com/watch?v=yHlUlBuba7Q&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=22
