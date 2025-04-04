@@ -253,58 +253,74 @@ func main()  {
 
 	// // declarando map
 
-	x := make(map[string]string)
+	// x := make(map[string]string)
 
-	x["nombre"] = "luis"
-	x["edad"] = "25"
-	x["ciudad"] = "bogota"
-	fmt.Println(x)
+	// x["nombre"] = "luis"
+	// x["edad"] = "25"
+	// x["ciudad"] = "bogota"
+	// fmt.Println(x)
 
-	// acceder a los valores
-	fmt.Println(x["nombre"])
-	fmt.Println(x["edad"])
+	// // acceder a los valores
+	// fmt.Println(x["nombre"])
+	// fmt.Println(x["edad"])
 
-	// declarando un map 3
+	// // declarando un map 3
 
-	var edades map[string]int = map[string]int{
-		"luis": 25,
-		"juan": 30,
-		"maria": 20,
-	}
-	fmt.Println(edades)
+	// var edades map[string]int = map[string]int{
+	// 	"luis": 25,
+	// 	"juan": 30,
+	// 	"maria": 20,
+	// }
+	// fmt.Println(edades)
 
-	// borrar un registro del map'
-	delete(edades, "juan")
-	fmt.Println(edades)
+	// // borrar un registro del map'
+	// delete(edades, "juan")
+	// fmt.Println(edades)
 
 
-	// cuando buscamos un valor que no existe
-	fmt.Println(edades["juan"]) // cuando no existe  retorna 0
+	// // cuando buscamos un valor que no existe
+	// fmt.Println(edades["juan"]) // cuando no existe  retorna 0
 
-	// saber si existe un valor
-	edad, ok := edades["juan"]
-	if  ok {
-		if edad > 18 {
-			fmt.Println("es mayor de edad")
-		} else {
-			fmt.Println("menor de edad")
-		}
-	} else {
-		fmt.Println("no existe")
-	}
+	// // saber si existe un valor
+	// edad, ok := edades["juan"]
+	// if  ok {
+	// 	if edad > 18 {
+	// 		fmt.Println("es mayor de edad")
+	// 	} else {
+	// 		fmt.Println("menor de edad")
+	// 	}
+	// } else {
+	// 	fmt.Println("no existe")
+	// }
 
-	edades["roberto"] = 66
+	// edades["roberto"] = 66
 
-	// recorrer un map
-	for nombre, edad := range edades {
-		if edad > 18 {
-			fmt.Printf("%s es mayor de edad○\n", nombre)
-		} else {
-			fmt.Printf("%s es menor de edad\n", nombre)
-		}
-	}
+	// // recorrer un map
+	// for nombre, edad := range edades {
+	// 	if edad > 18 {
+	// 		fmt.Printf("%s es mayor de edad○\n", nombre)
+	// 	} else {
+	// 		fmt.Printf("%s es menor de edad\n", nombre)
+	// 	}
+	// }
+
+	print("hola mundo")
+	print(fmt.Sprint(suma(5, 5)))
+	print(fmt.Sprint(resta(8, 5)))
 
 }
 
+func print(text string) {
+	fmt.Println(text)
+}
+
+func suma(a int, b int) int {
+	return a + b
+}
+
+func resta(a int, b int) (r int) {
+	r = a - b
+	return
+}
 // link vide
-// https://www.youtube.com/watch?v=BrUgwGhb-sA&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=29
+// https://www.youtube.com/watch?v=2V29HlNRpG4&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=32
