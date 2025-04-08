@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main()  {
@@ -307,7 +308,54 @@ func main()  {
 	print("hola mundo")
 	print(fmt.Sprint(suma(5, 5)))
 	print(fmt.Sprint(resta(8, 5)))
+	fmt.Println(sumar(5,6,3,6,9,5))
+	fmt.Println(sumar())
 
+	var numeros []int32 = []int32{1,2,3,4,5}
+	// no acepta como parametro un slice of number
+	fmt.Println((sumar(numeros...)))
+
+
+	var cadena string = "primo"
+	var cadenas []string = []string{"jodase", "pero", "bien", "jodido"}
+	print2(cadena, cadenas...)
+
+	clausura_interna := clausura
+
+	print(fmt.Sprint(clausura_interna()))
+
+	// pero tanbien podemos hacerlo de la siguiente manera
+	var saludo string = "hola"
+	clausura2 := func(){
+		print(saludo)
+	}
+	clausura2()
+
+	// funciones anonimas
+	var cadena3 string = "123456789"
+	cadena3 = strings.Map(func(r rune) rune {
+		return r + 1
+	}, cadena3)
+
+	fmt.Println((cadena3))
+	
+
+	// recibimos multiples valores de la func
+	var n1, n2, n3 int = multiplicar_varios(5)
+	fmt.Println(n1, n2, n3)
+}
+
+// retornar multiples valores  
+func multiplicar_varios(valor int) (n1, n2, n3 int) {
+	n1 = valor * 2
+	n2 = valor * 3
+	n3 = valor * 4
+	return
+}
+
+// no se puede crear un func dentro de otra
+func clausura() int {
+	return 10 + 25
 }
 
 func print(text string) {
@@ -322,5 +370,25 @@ func resta(a int, b int) (r int) {
 	r = a - b
 	return
 }
+
+
+// ...int usando este valor determinamos que va a recibir n cantidad de valores
+func sumar(numeros ...int32) (r int32) {
+	r = 0
+	for _, numero := range numeros {
+		r += int32(numero)
+	}
+	return
+}
+
+func print2(cadena string, cadenas ...string) {
+
+	for _, c := range cadenas {
+		cadena += " " + c
+	}
+
+	fmt.Println(cadena)
+}
+
 // link vide
-// https://www.youtube.com/watch?v=2V29HlNRpG4&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=32
+// https://www.youtube.com/watch?v=lc5Gr5CKH6A&list=PLl_hIu4u7P64MEJpR3eVwQ1l_FtJq4a5g&index=36
